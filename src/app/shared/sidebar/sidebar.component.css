@@ -1,0 +1,72 @@
+
+
+.categoria {
+  padding: 10px;
+  display: flex;
+  margin-bottom: 50px;
+  border: 2px solid rgb(97, 110, 74);
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
+  border-radius: 10px;
+  /* overflow-y: scroll; */
+  width: 100vw;
+  justify-content: center;
+  height: 34vh;
+
+}
+.ingrediente_container {
+  height: 12vh;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 34vh;
+
+}
+.ingrediente {
+  padding: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-family:sans-serif;
+  cursor: pointer;
+
+}
+
+.ingrediente:hover {
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+
+.carnes {
+  background-color: rgb(212, 179, 136);
+  }
+  .tomates {
+    background-color: rgba(223, 13, 13, 0.852);
+    color: rgb(252, 247, 241);
+
+  }
+  .quesos {
+    background-color: rgba(69, 166, 245, 0.849);
+  }
+  .pescados{
+    background-color: rgba(41, 41, 178, 0.904);
+    color: rgb(252, 247, 241);
+
+  }
+  .especias{
+    background-color: rgba(189, 143, 6, 0.966);
+  }
+  .vegetales{
+    background-color: rgba(49, 167, 49, 0.521);
+  }
+  .pastas {
+    background-color: rgb(250, 250, 5);
+  }
+  .cremas {
+    background-color: rgb(245, 245, 242);
+    color: black;
+  }

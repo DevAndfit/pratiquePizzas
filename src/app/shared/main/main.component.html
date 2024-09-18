@@ -1,0 +1,50 @@
+<!--
+<div class="start" (click)="startGame()" *ngIf="!inGame">
+  <button *ngIf="!gameStarted">Commencer</button>
+  <span class="conteo" *ngIf="countdown > 0">{{countdown}}</span>
+</div>
+
+
+
+<div class="practice" *ngIf="inGame">
+
+    <div class="pizza_container">
+      <div class="pizza" *ngFor="let pizza of randomPizzas" (click)="checkIngredient(pizza)">
+        <div class="nombre_container">
+          <span class="nombre_pizza">{{pizza.nombre}}</span>
+        </div>
+          <div class="ingrediente" *ngFor="let ingrediente of pizza.listaIngredientes"> - {{ingrediente}}</div>
+      </div>
+    </div>
+
+      <div class="btn_container">
+        <button (click)="startGame()">Au four!!</button>
+      </div>
+</div> -->
+
+<div class="start" (click)="startGame()" *ngIf="!inGame">
+  <button *ngIf="!gameStarted">Commencer</button>
+  <span class="conteo" *ngIf="countdown > 0">{{countdown}}</span>
+</div>
+
+<div class="practice" *ngIf="inGame">
+  <div class="pizza_container">
+    <div class="pizza" *ngFor="let pizza of randomPizzas" (click)="checkIngredient(pizza)">
+      <div class="nombre_container">
+        <span class="nombre_pizza">{{pizza.nombre}}</span>
+      </div>
+      <div class="ingrediente" *ngFor="let ingrediente of pizza.listaIngredientes" >
+        <span *ngIf="pizza.ingredientesVisibles.includes(ingrediente)"> - {{ingrediente}} </span>
+        <div class="cuadro"*ngIf="pizza.ingredientesVisibles.includes(ingrediente)" [appHighlightIngredient]="ingrediente" [visibleIngredients]="pizza.ingredientesVisibles"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="btn_container">
+    <button (click)="restartGame()" (click)="startGame()">Au four!!</button>
+  </div>
+</div>
+
+
+

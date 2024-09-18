@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practicasPizzas';
+
+  public selectedIngredient: string = '';
+
+  onIngredientSelected(ingredient: string) {
+    this.selectedIngredient = ingredient;
+  }
+
+
+
 }
