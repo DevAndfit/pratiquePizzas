@@ -15,7 +15,8 @@ img {
 
 @media (max-width: 600px) {
   img {
-    width: 80px;
+    width: 75px;
+    padding: 5px;
   }
   .header {
     height: 3vh;

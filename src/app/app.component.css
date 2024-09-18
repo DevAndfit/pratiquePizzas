@@ -22,6 +22,8 @@ app-sidebar {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  padding: 3px;
+  padding-right: 4px;
 }
 .main_wrapper {
   background:  url('../assets/cajas.jpg');
