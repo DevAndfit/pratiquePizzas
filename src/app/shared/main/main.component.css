@@ -27,18 +27,22 @@
   height: 43vh;
   border-radius: 10px;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.249);
-  background-color: rgba(98, 111, 80, 0.4);
+  background-color: rgba(75, 71, 50,0.3);
   min-width: 200px;
 }
 .nombre_container {
-  background-color: rgb(97, 110, 74);
+  background-color: rgba(97, 110, 74, 0.785);
   height: 60px;
   text-align: center;
   align-content: center;
-  color: rgb(145, 143, 132);
+  color: rgb(154, 153, 147);
   font-size: 25px;
   font-weight:600;
   margin-bottom: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .btn_container {
@@ -65,15 +69,14 @@ button:hover {
 
 .ingrediente {
   padding: 5px;
-  color: rgb(235, 230, 230);
+  color: rgb(248, 246, 246);
   margin-bottom: 10px;
   margin-top: 5px;
-  border-top: 2px solid rgb(97, 110, 74);
-  border-bottom:2px solid rgb(97, 110, 74) ;
+
   text-decoration: none;
   list-style: none;
   height: 25px;
-
+  background-color: rgba(97, 110, 74, 0.438);
   display: flex;
   align-content: center;
 }
@@ -116,3 +119,61 @@ button:hover {
   }
 
 
+  /* Media query para pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+  .practice {
+    padding: 0;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .conteo {
+    font-size: 120px;
+  }
+
+  .pizza_container {
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .pizza {
+    width: 40%;
+    height: 260px;
+    min-width: 150px;
+  }
+
+  .nombre_container {
+    font-size: 16px;
+    height: 46px;
+  }
+
+  .btn_container {
+    margin: 5px;
+    height: auto;
+    padding: 5px;
+  }
+
+  button {
+    width: 120%;
+    font-size: 15px;
+    width: auto;
+  }
+  .restart {
+    width: 120px;
+    height: 25px;
+    font-size: 13;
+  }
+
+  .ingrediente {
+    margin-bottom: 4px;
+    font-size: 13px;
+    height: 15px;
+  }
+
+  .cuadro {
+    height: 13px;
+    width: 13px;
+  }
+}

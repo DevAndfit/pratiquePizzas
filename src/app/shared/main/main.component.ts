@@ -152,7 +152,7 @@ export class MainComponent {
   public randomPizzas: any = [];
 
   getRandomPizzas(): any[] {
-    const numberOfPizzas = Math.floor(Math.random() * 5) + 1;
+    const numberOfPizzas = Math.floor(Math.random() * 4) + 1;
     const shuffled = this.pizzas.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, numberOfPizzas);
   }

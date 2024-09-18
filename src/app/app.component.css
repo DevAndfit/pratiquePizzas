@@ -3,7 +3,6 @@ app-header {
   width: 100vw;
   height: 6vh;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
-
 }
 
 app-main {
@@ -12,36 +11,35 @@ app-main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   width: 100vw;
   height: 56vh;
   background-color: rgba(75, 71, 50,0.95);
-  /* background-image: url(../assets/cajas.jpg); */
-
-
 }
-
 app-sidebar {
-  /* background-color: green; */
   background-color: rgba(75, 71, 50, 0.95);
-  height: 38vh;
+  height: min-content;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-
-
-
 }
-
 .main_wrapper {
   background:  url('../assets/cajas.jpg');
-  background-size: cover;
-  background-position: center;
-
+  background-size:auto ;
+  /* background-position: center; */
 }
-
-/* app-main, app-sidebar {
-  background: none;
-} */
+@media (max-width: 600px) {
+  .main_wrapper {
+    background:  url('../assets/cajas_movil.jpg');
+    background-size:auto;
+  }
+  app-header {
+    height: 3vh;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
+  }
+  app-main{
+    width: auto;
+    height: auto;
+    min-height: 400px;
+  }
+}

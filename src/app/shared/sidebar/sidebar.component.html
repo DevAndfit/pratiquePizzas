@@ -17,13 +17,13 @@
       <span class="ingrediente pescados" *ngFor="let item of ingredients.pescados" (click)="selectIngredient(item)">{{item}}</span>
     </div>
     <div class="ingrediente_container ">
+      <span class="ingrediente pastas" *ngFor="let item of ingredients.pastas" (click)="selectIngredient(item)">{{item}}</span>
+    </div>
+    <div class="ingrediente_container ">
       <span class="ingrediente especias" *ngFor="let item of ingredients.especias" (click)="selectIngredient(item)">{{item}}</span>
     </div>
     <div class="ingrediente_container ">
       <span class="ingrediente vegetales" *ngFor="let item of ingredients.vegetales" (click)="selectIngredient(item)">{{item}}</span>
-    </div>
-    <div class="ingrediente_container ">
-      <span class="ingrediente pastas" *ngFor="let item of ingredients.pastas" (click)="selectIngredient(item)">{{item}}</span>
     </div>
 
 </div>

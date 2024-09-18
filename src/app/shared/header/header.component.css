@@ -12,3 +12,12 @@ img {
   align-content: center;
 
 }
+
+@media (max-width: 600px) {
+  img {
+    width: 80px;
+  }
+  .header {
+    height: 3vh;
+  }
+}

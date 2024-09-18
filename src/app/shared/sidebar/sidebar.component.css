@@ -1,5 +1,3 @@
-
-
 .categoria {
   padding: 10px;
   display: flex;
@@ -7,11 +5,9 @@
   border: 2px solid rgb(97, 110, 74);
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
   border-radius: 10px;
-  /* overflow-y: scroll; */
   width: 100vw;
   justify-content: center;
   height: 34vh;
-
 }
 .ingrediente_container {
   height: 12vh;
@@ -20,7 +16,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   height: 34vh;
-
 }
 .ingrediente {
   padding: 5px;
@@ -33,9 +28,7 @@
   text-align: center;
   font-family:sans-serif;
   cursor: pointer;
-
 }
-
 .ingrediente:hover {
   transform: scale(1.04);
   transition: 0.5s;
@@ -69,4 +62,39 @@
   .cremas {
     background-color: rgb(245, 245, 242);
     color: black;
+  }
+
+  @media (max-width: 600px) {
+    .categoria {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: auto;
+      height: max-content;
+      padding: 5px;
+      justify-content: left;
+    }
+    .ingrediente_container {
+      height:max-content;
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+    .ingrediente {
+      padding: 6px;
+      box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
+      margin: 4px;
+      border-radius: 5px;
+      font-size: 12px;
+      text-align: center;
+      font-family:sans-serif;
+      cursor: pointer;
+    }
+
+    .ingrediente:hover {
+      transform: scale(1.04);
+      transition: 0.5s;
+    }
   }
