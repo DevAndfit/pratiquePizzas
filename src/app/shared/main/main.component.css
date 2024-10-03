@@ -1,10 +1,11 @@
+
 .practice{
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
+  width: 98vw;
+  justify-content: center
+
 }
 .conteo {
   font-size: 170px;
@@ -13,8 +14,8 @@
   font-family: sans-serif;
 }
 .pizza_container {
-  width: 100vw;
-  height: 40vh;
+  width: 98vw;
+  height: 43vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +25,7 @@
   margin: 10px;
   border: 2px solid rgb(98, 111, 80);
   width: 14vw;
-  height: 43vh;
+  height: 40vh;
   border-radius: 10px;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.249);
   background-color: rgba(75, 71, 50,0.3);

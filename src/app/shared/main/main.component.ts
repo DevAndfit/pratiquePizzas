@@ -100,7 +100,8 @@
 
 
 /////////////////////////////
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { HighlightRedDirective } from 'src/app/directives/highlight-red.directive';
 
 @Component({
   selector: 'app-main',
@@ -109,6 +110,7 @@ import { Component, Input } from '@angular/core';
 })
 export class MainComponent {
   @Input() selectedIngredient: string = '';
+  @ViewChild(HighlightRedDirective) highlightDirective!: HighlightRedDirective;
   public gameStarted: boolean = false;
   public inGame: boolean = false;
   public countdown: number = 0;
@@ -145,7 +147,7 @@ export class MainComponent {
     { nombre: "Savoyarde", listaIngredientes: ["s. creme", "mozzarella", "poitrine fumee", "reblochon", "f. oignons"], ingredientesVisibles: [] },
     { nombre: "Tartare", listaIngredientes: ["mozzarella", "filet de tomate", "des de tomate", "viande hachee", "sauce tartare (AC)", "oignons frit (AC)"], ingredientesVisibles: [] },
     { nombre: "Terre & mer", listaIngredientes: ["s. tomate", "mozzarella", "cabillaud", "chorizo", "poivron", "ciboulette"], ingredientesVisibles: [] },
-    { nombre: "Touraine", listaIngredientes: ["s. creme", "mozzarella", "jambon sec", "sainte-maure", "ciboulette", "noix (AC) "] , ingredientesVisibles: []},
+    { nombre: "Touraine", listaIngredientes: ["s. creme", "mozzarella", "jambon sec", "sainte-maure", "ciboulette", "noix (AC)"] , ingredientesVisibles: []},
     { nombre: "Vegetale", listaIngredientes: ["s. tomate", "champignons", "poivron", "f. oignons", "huile basilic", "roquette (AC)"], ingredientesVisibles: [] },
     { nombre: "Vegetarienne di bufala", listaIngredientes: ["s. tomate", "champignons", "poivron", "f. oignons", "bufala", "huile basilic"] , ingredientesVisibles: []}
   ];
@@ -174,13 +176,16 @@ export class MainComponent {
     this.randomPizzas = this.getRandomPizzas();
   }
 
-  checkIngredient(pizza: any) {
-    if (pizza.listaIngredientes.includes(this.selectedIngredient)) {
-      if (!pizza.ingredientesVisibles.includes(this.selectedIngredient)) {
-        pizza.ingredientesVisibles.push(this.selectedIngredient);
+  checkIngredient(pizza: any, event: Event) {
+    const element = event.currentTarget as HTMLElement | null;
+    if (element) {
+      if (pizza.listaIngredientes.includes(this.selectedIngredient)) {
+        if (!pizza.ingredientesVisibles.includes(this.selectedIngredient)) {
+          pizza.ingredientesVisibles.push(this.selectedIngredient);
+        }
+      } else {
+        this.highlightDirective.highlight(element, 'red');
       }
-    } else {
-      alert(`El ingrediente ${this.selectedIngredient} no está en la pizza ${pizza.nombre}`);
     }
   }
 }

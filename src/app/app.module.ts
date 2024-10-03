@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { MainComponent } from './shared/main/main.component';
 import { HighlightIngredientDirective } from './directives/highlight-ingredient.directive';
+import { HighlightRedDirective } from './directives/highlight-red.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HighlightIngredientDirective } from './directives/highlight-ingredient.
     HeaderComponent,
     SidebarComponent,
     MainComponent,
-    HighlightIngredientDirective
+    HighlightIngredientDirective,
+    HighlightRedDirective
   ],
   imports: [
     BrowserModule,

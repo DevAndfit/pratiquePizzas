@@ -1,7 +1,7 @@
 
 app-header {
   width: 100vw;
-  height: 6vh;
+  height: 5vh;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
 }
 
@@ -12,20 +12,19 @@ app-main {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 56vh;
+  height: 55vh;
   background-color: rgba(75, 71, 50,0.95);
 }
 app-sidebar {
   background-color: rgba(75, 71, 50, 0.95);
-  height: min-content;
+  height: 40vh;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  padding: 3px;
-  padding-right: 4px;
+
 }
 .main_wrapper {
+
   background:  url('../assets/cajas.jpg');
   background-size:auto ;
   /* background-position: center; */

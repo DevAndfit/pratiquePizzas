@@ -21,16 +21,17 @@
         <button (click)="startGame()">Au four!!</button>
       </div>
 </div> -->
+<div class="container">
 
 <div class="start" (click)="startGame()" *ngIf="!inGame">
   <button *ngIf="!gameStarted">Commencer</button>
   <span class="conteo" *ngIf="countdown > 0">{{countdown}}</span>
 </div>
 
-<div class="practice" *ngIf="inGame">
-  <div class="pizza_container">
-    <div class="pizza" *ngFor="let pizza of randomPizzas" (click)="checkIngredient(pizza)">
-      <div class="nombre_container">
+<div class="practice" *ngIf="inGame" >
+  <div  class="pizza_container"  >
+    <div  class="pizza" *ngFor="let pizza of randomPizzas" (click)="checkIngredient(pizza, $event)"  appHighlightRed >
+      <div class="nombre_container"  >
         <span class="nombre_pizza">{{pizza.nombre}}</span>
       </div>
       <div class="ingrediente" *ngFor="let ingrediente of pizza.listaIngredientes" >
@@ -48,3 +49,4 @@
 
 
 
+</div>

@@ -1,30 +1,31 @@
 .categoria {
-  padding: 10px;
   display: flex;
-  margin-bottom: 50px;
+  margin: auto;
+  /* margin-bottom: 40px; */
   border: 2px solid rgb(97, 110, 74);
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
   border-radius: 10px;
-  width: 100vw;
+  width: 96vw;
   justify-content: center;
-  height: 34vh;
+  padding: 5px;
+
 }
 .ingrediente_container {
-  height: 12vh;
-  margin: 10px;
+
+  margin: 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 34vh;
+  height: 33vh;
 }
 .ingrediente {
   padding: 5px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.224);
   margin: 5px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   font-family:sans-serif;
   cursor: pointer;
