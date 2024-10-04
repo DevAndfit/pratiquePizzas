@@ -100,7 +100,7 @@
 
 
 /////////////////////////////
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { HighlightRedDirective } from 'src/app/directives/highlight-red.directive';
 
 @Component({
@@ -108,12 +108,19 @@ import { HighlightRedDirective } from 'src/app/directives/highlight-red.directiv
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent {
+export class MainComponent implements OnChanges{
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['selectedIngredient']) {
+      this.applyClass();
+    }
+  }
   @Input() selectedIngredient: string = '';
   @ViewChild(HighlightRedDirective) highlightDirective!: HighlightRedDirective;
   public gameStarted: boolean = false;
   public inGame: boolean = false;
   public countdown: number = 0;
+  public additionalClasss = '';
   public pizzas = [
       { nombre: "4 fromages", listaIngredientes: ["s. tomate","mozzarella","reblochon","bournette","bleu du vercors","origan"], ingredientesVisibles: [] },
     { nombre: "Barboteuse", listaIngredientes: ["s. creme","mozzarella","saumon","huile basilic", "roquette (AC)"], ingredientesVisibles: [] },
@@ -188,5 +195,74 @@ export class MainComponent {
       }
     }
   }
+
+
+  applyClass(): void {
+    if (this.selectedIngredient === 's. tomate' || this.selectedIngredient === 'filet de tomate') {
+      this.additionalClasss = 'tomates';
+    } else if (
+      this.selectedIngredient === 'mozzarella' ||
+      this.selectedIngredient === 'bufala' ||
+      this.selectedIngredient === 'reblochon' ||
+      this.selectedIngredient === 'bournette' ||
+      this.selectedIngredient === 'bleu du vercors' ||
+      this.selectedIngredient === 'ossau iraty' ||
+      this.selectedIngredient === 'cheddar' ||
+      this.selectedIngredient === 'parmesan (AC)' ||
+      this.selectedIngredient === 'st marcellin' ||
+      this.selectedIngredient === 'sainte-maure'
+    ) {
+      this.additionalClasss = 'quesos';
+    } else if (
+      this.selectedIngredient === 'jambon sec' ||
+      this.selectedIngredient === 'viande hachee' ||
+      this.selectedIngredient === 'poitrine fumee' ||
+      this.selectedIngredient === 'chorizo' ||
+      this.selectedIngredient === 'jambon blanc' ||
+      this.selectedIngredient === 'poulet' ||
+      this.selectedIngredient === 'oeuf'
+    ) {
+      this.additionalClasss = 'carnes';
+    } else if (
+      this.selectedIngredient === 'saumon' ||
+      this.selectedIngredient === 'cabillaud'
+    ) {
+      this.additionalClasss = 'pescados';
+    } else if (
+      this.selectedIngredient === 'curry de madras' ||
+      this.selectedIngredient === 'cumin' ||
+      this.selectedIngredient === 'origan' ||
+      this.selectedIngredient === 'piment d\'espelette' ||
+      this.selectedIngredient === 'sauce tartare (AC)' ||
+      this.selectedIngredient === 'oignon frit (AC)' ||
+      this.selectedIngredient === 'thym seche' ||
+      this.selectedIngredient === 'miel' ||
+      this.selectedIngredient === 'noix (AC)'
+    ) {
+      this.additionalClasss = 'especias';
+    } else if (
+      this.selectedIngredient === 'champignons' ||
+      this.selectedIngredient === 'f. oignons' ||
+      this.selectedIngredient === 'des de tomate' ||
+      this.selectedIngredient === 'huile basilic' ||
+      this.selectedIngredient === 'poivron' ||
+      this.selectedIngredient === 'ciboulette' ||
+      this.selectedIngredient === 'roquette (AC)'
+    ) {
+      this.additionalClasss = 'vegetales';
+    } else if (
+      this.selectedIngredient === 'ravioles'
+    ) {
+      this.additionalClasss = 'pastas';
+    } else if (
+      this.selectedIngredient === 's. creme' ||
+      this.selectedIngredient === 'filet de creme'
+    ) {
+      this.additionalClasss = 'cremas';
+    } else {
+      this.additionalClasss = '';
+    }
+  }
+
 }
 

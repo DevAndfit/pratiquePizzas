@@ -43,6 +43,11 @@
   </div>
 
   <div class="btn_container">
+    <div class="selected_ingredient_container" >
+      <span class="selected_ingredient">Ingrédient sélectionné : </span>
+      <span class="selected_ingredient_name" [ngClass]="additionalClasss" >{{ selectedIngredient }}</span>
+
+    </div>
     <button class="restart" (click)="restartGame()" (click)="startGame()">Au four!!</button>
   </div>
 </div>

@@ -1,18 +1,18 @@
-
-.practice{
+.practice {
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   width: 98vw;
   justify-content: center
-
 }
+
 .conteo {
   font-size: 170px;
   font-weight: 400;
   color: rgb(145, 142, 128);
   font-family: sans-serif;
 }
+
 .pizza_container {
   width: 98vw;
   height: 43vh;
@@ -28,17 +28,18 @@
   height: 40vh;
   border-radius: 10px;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.249);
-  background-color: rgba(75, 71, 50,0.3);
+  background-color: rgba(75, 71, 50, 0.3);
   min-width: 200px;
 }
+
 .nombre_container {
   background-color: rgba(97, 110, 74, 0.785);
   height: 60px;
   text-align: center;
   align-content: center;
-  color: rgb(154, 153, 147);
+  color: rgb(234, 233, 228);
   font-size: 25px;
-  font-weight:600;
+  font-weight: 600;
   margin-bottom: 5px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -49,9 +50,14 @@
 .btn_container {
   margin: 10px;
   height: 40px;
+  width: 60vw;
   padding: 5px;
   margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 button {
   height: 45px;
   width: 180px;
@@ -68,12 +74,33 @@ button:hover {
   transition: 0.7s;
 }
 
+.selected_ingredient_container {
+  color: antiquewhite;
+  font-size: medium;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.selected_ingredient {
+
+
+}
+
+.selected_ingredient_name {
+  height: 30px;
+  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.249);
+  visibility: hidden;
+}
+
 .ingrediente {
   padding: 5px;
   color: rgb(248, 246, 246);
   margin-bottom: 10px;
   margin-top: 5px;
-
   text-decoration: none;
   list-style: none;
   height: 25px;
@@ -91,36 +118,60 @@ button:hover {
 
 .carnes {
   background-color: rgb(212, 179, 136);
-  }
-  .tomates {
-    background-color: rgba(223, 13, 13, 0.852);
-    color: rgb(252, 247, 241);
+  visibility: visible;
+  color: black;
 
-  }
-  .quesos {
-    background-color: rgba(69, 166, 245, 0.849);
-  }
-  .pescados{
-    background-color: rgba(41, 41, 178, 0.904);
-    color: rgb(252, 247, 241);
+}
 
-  }
-  .especias{
-    background-color: rgba(189, 143, 6, 0.966);
-  }
-  .vegetales{
-    background-color: rgba(49, 167, 49, 0.521);
-  }
-  .pastas {
-    background-color: rgb(250, 250, 5);
-  }
-  .cremas {
-    background-color: rgb(245, 245, 242);
-    color: black;
-  }
+.tomates {
+  background-color: rgba(223, 13, 13, 0.852);
+  color: rgb(252, 247, 241);
+  visibility: visible;
+
+}
+
+.quesos {
+  background-color: rgba(69, 166, 245, 0.849);
+  visibility: visible;
+  color: black;
+
+}
+
+.pescados {
+  background-color: rgba(41, 41, 178, 0.904);
+  color: rgb(252, 247, 241);
+  visibility: visible;
+}
+
+.especias {
+  background-color: rgba(189, 143, 6, 0.966);
+  visibility: visible;
+  color: black;
+
+}
+
+.vegetales {
+  background-color: rgba(49, 167, 49, 0.521);
+  visibility: visible;
+  color: rgb(252, 247, 241);
 
 
-  /* Media query para pantallas de hasta 600px de ancho */
+}
+
+.pastas {
+  background-color: rgb(250, 250, 5);
+  color: black;
+  visibility: visible;
+}
+
+.cremas {
+  background-color: rgb(245, 245, 242);
+  visibility: visible;
+  color: black;
+}
+
+
+/* Media query para pantallas de hasta 600px de ancho */
 @media (max-width: 600px) {
   .practice {
     padding: 0;
@@ -161,8 +212,9 @@ button:hover {
     font-size: 15px;
     width: auto;
   }
+
   .restart {
-    width: 120px;
+    width: 110px;
     height: 25px;
     font-size: 13;
   }
@@ -176,5 +228,30 @@ button:hover {
   .cuadro {
     height: 13px;
     width: 13px;
+  }
+
+  .btn_container {
+    width: 96vw;
+  }
+  .selected_ingredient_container {
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .selected_ingredient {
+    font-size: 15;
+    align-items: center;
+  }
+
+  .selected_ingredient_name {
+    height: 20px;
+    padding: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 3px;
   }
 }

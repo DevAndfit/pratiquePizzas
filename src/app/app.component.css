@@ -24,7 +24,6 @@ app-sidebar {
 
 }
 .main_wrapper {
-
   background:  url('../assets/cajas.jpg');
   background-size:auto ;
   /* background-position: center; */
@@ -32,7 +31,8 @@ app-sidebar {
 @media (max-width: 600px) {
   .main_wrapper {
     background:  url('../assets/cajas_movil.jpg');
-    background-size:auto;
+
+
   }
   app-header {
     height: 3vh;
@@ -42,5 +42,11 @@ app-sidebar {
     width: auto;
     height: auto;
     min-height: 400px;
+  }
+  app-sidebar {
+    background-color: rgba(75, 71, 50, 0.95);
+    height:auto;
+    width: 100vw;
+    padding-bottom: 45px;
   }
 }
